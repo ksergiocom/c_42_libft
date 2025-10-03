@@ -10,6 +10,7 @@ int ft_toupper(int c)
 	return c;
 }
 
+/*
 int main()
 {
 	printf("ft_tolower(%c): %c\n", 'A', ft_toupper('A'));
@@ -18,6 +19,7 @@ int main()
 	printf("ft_tolower(%c): %c\n", '!', ft_toupper('!'));
 	printf("ft_tolower(%c): %c\n", '0', ft_toupper('0'));
 	printf("ft_tolower(%c): %c\n", 245, ft_toupper(245));
-
+	
 	return 0;
 }
+*/

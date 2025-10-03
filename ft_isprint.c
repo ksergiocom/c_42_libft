@@ -9,6 +9,7 @@ int ft_isprint(int c)
 	return 0;
 }
 
+/*
 int main()
 {
 	int i = 0;
@@ -17,3 +18,4 @@ int main()
 		i++;
 	}
 }
+*/

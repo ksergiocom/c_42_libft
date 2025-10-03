@@ -20,13 +20,14 @@ void *ft_memset(void *dest, int c, size_t count)
 	return dest;
 }
 
-
+/*
 int main()
 {
 	char str[] = "Hola que tal todo, estoy probando memset";
 	printf("str original: %s\n", str);
 	ft_memset(str, 'a', 10);
 	printf("str memset: %s\n", str);
-
+	
 	return 0;
 }
+*/

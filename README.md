@@ -1,10 +1,12 @@
-# libft
+# 42 libft
 
 Este proyecto consiste en programar una librería en C.
-La librería tendrá un montón de funciones de propósito general.
+
+La librería funciones de propósito general.
 
 ## ToDo
 0. Terminar funciones (aunque no sean correctas)
+	1. ft_memset
 1. Aprender sobre los Makefile
 2. Comentar después para recordad detalles
 3. Agregar y estilizar según norma
