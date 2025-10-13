@@ -8,6 +8,7 @@ int ft_isdigit(int c);
 int ft_isprint(int c);
 void *ft_memcpy(void *dest, const void *src, size_t count);
 void *ft_memset(void *dest, int c, size_t count);
+void ft_putstr_fd(char *s, int fd);
 char *ft_strchr(const char *s, int c);
 char *ft_strjoin(char const *s1, char const *s2);
 size_t ft_strlen(const char *s);
