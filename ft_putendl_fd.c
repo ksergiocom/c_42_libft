@@ -8,10 +8,11 @@ void ft_putendl_fd(char *s, int fd)
 }
 
 
-
+/*
 int main(){
 
 	ft_putendl_fd("hola mundo!", 1);	
 			
 	return 0;
 }
+*/

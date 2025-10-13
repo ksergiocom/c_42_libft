@@ -34,6 +34,7 @@ int ft_atoi(const char *s){
 	return res;
 }
 
+/*
 void test_atoi(const char *s){
 	printf("---------\n");
 	printf("String: %s\n", s);
@@ -58,4 +59,4 @@ int main(){
 
 	return 0;
 }
-
+*/

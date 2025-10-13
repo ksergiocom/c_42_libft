@@ -14,6 +14,7 @@ size_t ft_strlcpy(char *dest, const char *src, size_t dsize)
 	return ft_strlen(src);
 }
 
+/*
 int main()
 {
 	char s1[] = "Hola mundo!";
@@ -28,3 +29,4 @@ int main()
 
 	return 0;
 }
+*/

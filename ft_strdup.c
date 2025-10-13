@@ -12,7 +12,7 @@ char *ft_strdup(const char *s)
 	return p;	
 }
 
-
+/*
 int main(){
 
 	char *s = "Hola mundo!";
@@ -26,3 +26,4 @@ int main(){
 
 	return 0;
 }
+*/

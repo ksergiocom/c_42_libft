@@ -17,6 +17,7 @@ int ft_memcmp(const void *s1, const void *s2, size_t n){
 
 }
 
+/*
 int main(){
 	printf("hola - hola [Res: %d]\n", ft_memcmp("hola","hola",5));
 	printf("hola - hola [Res: %d]\n", ft_memcmp("hola","hola",2));
@@ -25,3 +26,4 @@ int main(){
 
 	return 0;
 }
+*/

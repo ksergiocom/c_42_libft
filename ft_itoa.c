@@ -59,6 +59,7 @@ void check_itoa(int n){
 	return;
 }
 
+/*
 int main(){
 
 	check_itoa(1);
@@ -70,5 +71,4 @@ int main(){
 
 	return 0;
 }
-
-
+*/

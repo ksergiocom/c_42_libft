@@ -35,6 +35,7 @@ char *ft_strtrim(char const *s1, char const *set)
 	return trimmed;
 }
 
+/*
 int main(){
 
 	char *original = "azaabbbazacczaaaaa";
@@ -45,3 +46,4 @@ int main(){
 
 	return 0;
 }
+*/

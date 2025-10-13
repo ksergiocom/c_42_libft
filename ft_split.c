@@ -63,6 +63,8 @@ char **ft_split(char const *s, char c)
 	return array;
 }
 
+
+/*
 int main(){
 	char *string = "Holaquetal?";
 
@@ -76,3 +78,4 @@ int main(){
 
 	return 0;
 }
+*/

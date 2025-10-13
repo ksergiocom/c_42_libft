@@ -46,6 +46,7 @@ size_t ft_strlcat(char *dst, const char *src, size_t size)
 	return final_len;
 }
 
+/*
 int main()
 {
 	char str1[] = "Hola";
@@ -56,3 +57,4 @@ int main()
 
 	return 0;
 }
+*/

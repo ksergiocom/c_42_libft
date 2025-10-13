@@ -27,6 +27,7 @@ void *ft_memmove(void *dest, const void *src, size_t count)
 	return d;
 }
 
+/*
 int main()
 {
 	char str[] = "Hola mundo!";
@@ -38,3 +39,4 @@ int main()
 
 	return 0;	
 }
+*/
