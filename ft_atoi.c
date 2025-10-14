@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:05:47 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 20:17:08 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/14 21:38:29 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ int	ft_atoi(const char *s)
 		res *= -1;
 	return (res);
 }
-
 
 /*
 void test_atoi(const char *s){

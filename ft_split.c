@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/14 20:58:48 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:05:48 by sekhudol         ###   ########.fr       */
+/*   Created: 2025/10/14 22:58:52 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/15 01:09:24 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,75 +14,70 @@
 #include <stdlib.h>
 #include "libft.h"
 
+int	word_len(char const *s, char c)
+{
+	int	len;
+
+	len = 0;
+	while (*s && *s != c)
+	{
+		len++;
+		s++;
+	}
+	return (len);
+}
+
+int	count_words(char const *s, char c)
+{
+	int	count;
+
+	if (!*s)
+		return (0);
+	count = 1;
+	while (*s)
+	{
+		if (*s == c)
+			count++;
+		s++;
+	}
+	return (count);
+}
+
 char	**ft_split(char const *s, char c)
 {
-	int		i;
-	int		j;
-	int		start;
-	int		palabra_idx;
-	int		palabras;
+	int		word_size;
+	int		words_count;
 	char	**array;
-	char	*new_string;
+	char	**start;
 
-	i = 0;
-	j = 0;
-	start = 0;
-	palabra_idx = 0;
-	palabras = 1;
-	**array;
-	while (s[i])
-	{
-		if (s[i] == c)
-			palabras++;
-		i++;
-	}
-	array = malloc((palabras + 1) * sizeof(char *));
+	words_count = count_words(s, c) + 1;
+	array = malloc(words_count * sizeof(char *));
+	start = array;
 	if (!array)
 		return (NULL);
-	i = 0;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] == c)
-		{
-			new_string = malloc((i - start + 1) * sizeof(char));
-			j = 0;
-			while (j < i - start)
-			{
-				new_string[j] = s[start + j];
-				j++;
-			}
-			array[palabra_idx] = new_string;
-			palabra_idx++;
-			start = i + 1;
-		}
-		i++;
+		word_size = (word_len(s, c)) + 1;
+		*array = malloc(word_size * sizeof(char));
+		if (!*array)
+			return (NULL);
+		ft_strlcpy(*array, s, word_size);
+		array++;
+		s = s + word_size;
 	}
-	new_string = malloc((i - start + 1) * sizeof(char));
-	j = 0;
-	while (j < i - start)
-	{
-		new_string[j] = s[start + j];
-		j++;
-	}
-	array[palabra_idx] = new_string;
-	palabra_idx++;
-	start = i + 1;
-	array[palabra_idx] = NULL;
-	return (array);
+	*array = NULL;
+	return (start);
 }
 
 /*
-int main(){
-	char *string = "Holaquetal?";
-
-	char **a = ft_split(string, ',');
-
+int main(void)
+{
+	char *s = "Hola,que,tal!?";
+	char **a = ft_split(s, ',');
 	while(*a){
 		printf("%s\n", *a);
 		a++;
 	}
-
-
-	return 0;
+	return (0);
 }
 */

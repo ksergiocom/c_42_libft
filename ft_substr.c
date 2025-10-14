@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:29:28 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:30:11 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/14 21:37:24 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *new_s;
+	size_t	i;
+	char	*new_s;
 
 	i = 0;
-	new_s= malloc(len);
-	if(!new_s)
-		return NULL;
-	while(i < len)
+	new_s = malloc(len);
+	if (!new_s)
+		return (NULL);
+	while (i < len)
 	{
-		new_s[i] = s[start+i];
+		new_s[i] = s[start + i];
 		i++;
 	}
 	return (new_s);

@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:20:47 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:24:50 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/14 22:10:18 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	while (big[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (little[j] && big[i + j] && big[i + j] == little[j] && i + j < len)
+		while (little[j]
+			&& big[i + j]
+			&& big[i + j] == little[j]
+			&& i + j < len)
 		{
 			j++;
 		}
