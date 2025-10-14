@@ -1,7 +1,7 @@
 #include<stdio.h>
-#include"ft_lib.h"
+#include"libft.h"
 
-char *ft_strchr(const char *s, int c)
+char *ft_strrchr(const char *s, int c)
 {
 
 	int i = ft_strlen(s);

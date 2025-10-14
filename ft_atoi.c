@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"ft_lib.h"
+#include"libft.h"
 
 int ft_atoi(const char *s){
 

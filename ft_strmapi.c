@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include"ft_lib.h"
+#include"libft.h"
 
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char)){
 	int i = 0;
@@ -13,7 +13,7 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char)){
 
 	// Aplicar la funcion a cada char de la string
 	while(i<string_len){
-		new_string = f(i, s[i]);
+		new_string[i] = f(i, s[i]);
 		i++;
 	}
 

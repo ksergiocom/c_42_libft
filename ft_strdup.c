@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include"ft_lib.h"
+#include"libft.h"
 
 char *ft_strdup(const char *s)
 {

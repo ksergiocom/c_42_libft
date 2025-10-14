@@ -24,6 +24,7 @@ void *ft_memcpy(void *dest, const void *src, size_t count)
 	return dest;
 }
 
+/*
 int main()
 {
 	char *string = "Hola que tal";
@@ -35,3 +36,4 @@ int main()
 
 	return 0;
 }
+*/
