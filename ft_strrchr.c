@@ -1,19 +1,30 @@
-#include<stdio.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 21:25:14 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 21:26:21 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strrchr(const char *s, int c)
+#include <stdio.h>
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {
+	int	i;
 
-	int i = ft_strlen(s);
-	
-	while(i>=0){
-		if(s[i] == c){
-			return (char*) &s[i];
-		}
+	i = ft_strlen(s);
+	while (i >= 0)
+	{
+		if (s[i] == c)
+			return ((char *) &s[i]);
 		i--;
 	}
-	
-	return NULL;
+	return (NULL);
 }
 
 /*

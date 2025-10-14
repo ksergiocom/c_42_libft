@@ -1,25 +1,31 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:21:04 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 20:23:18 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_bzero(void *dest, size_t count)
+#include <stdio.h>
+
+void	*ft_bzero(void *dest, size_t count)
 {
-	size_t i=0;
-	/*
-	El puntero original es de tipo void*, entonces no sabemos cuanto
-	debemos desplazarnos en memoria.
-	La memoria copia Byte a Byte, por lo cual podemos asumir que es 
-	de tipo char ya que este tipo solo ocupa un único Byte y así el 
-	compilador sabe cuanto debe desplazarse.
-	*/
-	char *s=dest;
+	size_t	i;
+	char	*s;
 
-	while(i<count){
-		s[i]='\0';
+	i = 0;
+	*s = dest;
+	while (i < count)
+	{
+		s[i] = '\0';
 		i++;
 	}
-
-	return dest;
+	return (dest);
 }
-
 /*
 int main()
 {

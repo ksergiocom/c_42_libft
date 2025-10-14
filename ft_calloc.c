@@ -1,20 +1,31 @@
-#include<stdlib.h>
-#include<limits.h>
-#include<stdint.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:23:47 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 20:26:00 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_calloc(size_t nmemb, size_t size){
-	void *p = malloc(nmemb*size);
+#include <stdlib.h>
+#include <limits.h>
+#include <stdint.h>
+#include "libft.h"
 
-	// Gestionar un posible overflow
+void	*ft_calloc(size_t nmemb, size_t size)
+{
+	void	*p;
+
+	p = malloc (nmemb * size);
 	if (nmemb != 0 && size > SIZE_MAX / nmemb)
-  	return NULL;
-
-	if(!p)
-		return NULL;
+		return (NULL);
+	if (!p)
+		return (NULL);
 	ft_bzero(p, nmemb * size);
-
-	return p;
+	return (p);
 }
 
 /*

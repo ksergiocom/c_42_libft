@@ -1,49 +1,44 @@
-#include<stdio.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 21:14:27 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 21:14:56 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-size_t ft_strlcat(char *dst, const char *src, size_t size)
+#include <stdio.h>
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	// Necesario para valor de retorno antes de modificar
-	// el valor de dst.
-	size_t initial_len_dst = ft_strlen(dst);
-	size_t initial_len_src = ft_strlen(src);
-	size_t final_len = initial_len_dst + initial_len_src;
+	size_t	initial_len_dst;
+	size_t	initial_len_src;
+	size_t	final_len;
+	int		j;
+	size_t	i;
 
-	// CREO QUE ESTO LO ATRAPA EL CODIGO DE ABAJO!
-	// (si falla descomentar)
-	//
-	// Si size es 0, entonces dst no se sabe que es, por lo 
-	// que no debemos escribir NADA!
-	//	if(size <= 0)
-	//	return initial_len_src;
-
-	// ¡Cuando size < longitud de dest significa, que no vamos
-	// a concatenar nada! Se va a quedar solo dest.
-	if(size < initial_len_dst)
-		return size + initial_len_src;
-
-	size_t i = 0;
-	// Recorrer e incrementar el idx con dst.
-	// No debemos hacer nada más
-	while(i<size-1 && dst[i]){
+	initial_len_dst = ft_strlen(dst);
+	initial_len_src = ft_strlen(src);
+	final_len = initial_len_dst + initial_len_src;
+	j = 0;
+	if (size < initial_len_dst)
+		return (size + initial_len_src);
+	while (i < size - 1 && dst[i])
+	{
 		i++;
 	}
-
-	
-	int j = 0;
-	// Ahora tenemos el indice i para llevar el tracking en dst
-	// y comprobar que nos pasamos del size - 1 (para el '\0')
-	// Por otro lado el j simplemente lo usamos para iterar src 
-	while(i<size-1 && src[j]){
+	while (i < size - 1 && src[j])
+	{
 		dst[i] = src[j];
 		j++;
 		i++;
 	}
-
-
 	dst[i] = '\0';
-
-	return final_len;
+	return (final_len);
 }
 
 /*

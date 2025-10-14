@@ -1,68 +1,75 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:58:48 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 21:05:48 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.h>
+#include "libft.h"
 
-char **ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
-	int i = 0;
-	int j = 0;
-	int start = 0;
-	int palabraIdx = 0;
-	int palabras = 1;
-	char **array;
+	int		i;
+	int		j;
+	int		start;
+	int		palabra_idx;
+	int		palabras;
+	char	**array;
+	char	*new_string;
 
-	// Contar palabras
-	while(s[i]){
-		if(s[i] == c)
+	i = 0;
+	j = 0;
+	start = 0;
+	palabra_idx = 0;
+	palabras = 1;
+	**array;
+	while (s[i])
+	{
+		if (s[i] == c)
 			palabras++;
 		i++;
 	}
-
-	// Alojar espacio para array
-	array = malloc((palabras+1) * sizeof(char *));
-	if(!array)
-		return NULL;
-
-	// Recorrer string y reservar espacio para cada palabra
+	array = malloc((palabras + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
 	i = 0;
-	while(s[i]){
-		if(s[i] == c){
-			// Reservar memoria para esta palabra
-			char *new_string = malloc((i - start + 1) * sizeof(char));
-			j=0;
-			while(j<i-start){
-				new_string[j] = s[start+j]; 
+	while (s[i])
+	{
+		if (s[i] == c)
+		{
+			new_string = malloc((i - start + 1) * sizeof(char));
+			j = 0;
+			while (j < i - start)
+			{
+				new_string[j] = s[start + j];
 				j++;
 			}
-			array[palabraIdx] = new_string;
-			palabraIdx++;
-
-			// Donde empieza la siguiente palabra
-			start = i+1;
-
+			array[palabra_idx] = new_string;
+			palabra_idx++;
+			start = i + 1;
 		}
 		i++;
 	}
-
-	// Agregar la ultima palabra sin delimitador
-	char *new_string = malloc((i - start + 1) * sizeof(char));
-	j=0;
-	while(j<i-start){
-		new_string[j] = s[start+j]; 
+	new_string = malloc((i - start + 1) * sizeof(char));
+	j = 0;
+	while (j < i - start)
+	{
+		new_string[j] = s[start + j];
 		j++;
 	}
-	array[palabraIdx] = new_string;
-	palabraIdx++;
-
-	// Donde empieza la siguiente palabra
-	start = i+1;
-					
-	array[palabraIdx] = NULL;
-
-	return array;
+	array[palabra_idx] = new_string;
+	palabra_idx++;
+	start = i + 1;
+	array[palabra_idx] = NULL;
+	return (array);
 }
-
 
 /*
 int main(){

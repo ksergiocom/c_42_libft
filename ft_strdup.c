@@ -1,15 +1,29 @@
-#include<stdio.h>
-#include"libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 21:07:08 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 21:09:05 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char *ft_strdup(const char *s)
+#include <stdio.h>
+#include "libft.h"
+
+char	*ft_strdup(const char *s)
 {
-	int len = ft_strlen(s);
-	char *p = (char *) ft_calloc(sizeof(char), len + 1);
-	if(!p)
-		return NULL;
+	int		len;
+	char	*p;
+
+	len = ft_strlen(s);
+	*p = (char *) ft_calloc(sizeof(char), len + 1);
+	if (!p)
+		return (NULL);
 	ft_strlcpy(p, s, len);
-	
-	return p;	
+	return (p);
 }
 
 /*

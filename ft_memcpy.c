@@ -1,27 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:50:36 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 20:51:37 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdio.h>
 #include <stddef.h>
 
-void *ft_memcpy(void *dest, const void *src, size_t count)
+void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
-	size_t i = 0;
+	size_t	i;
+	char	*s;
+	char	*d;
 
-	/*
-	El puntero original es de tipo void*, entonces no sabemos cuanto
-	debemos desplazarnos en memoria.
-	La memoria copia Byte a Byte, por lo cual podemos asumir que es
-	de tipo char ya que este tipo solo ocupa un único Byte y así el
-	compilador sabe cuanto debe desplazarse.
-	*/
-	char *s = (char *)src;
-	char *d = (char *)dest;
-
+	i = 0;
+	s = (char *)src;
+	d = (char *)dest;
 	while (i < count)
 	{
 		d[i] = s[i];
 		i++;
 	}
-
-	return dest;
+	return (dest);
 }
 
 /*

@@ -1,11 +1,24 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:27:52 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 20:28:39 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_isalpha(int c)
+#include <stdio.h>
+
+int	ft_isalpha(int c)
 {
-	if(c>=65 && c <= 90) return 1;
-	if(c>=97 && c <= 122) return 1;
-
-	return 0;
+	if (c >= 65 && c <= 90)
+		return (1);
+	if (c >= 97 && c <= 122)
+		return (1);
+	return (0);
 }
 
 /*

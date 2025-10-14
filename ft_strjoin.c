@@ -1,18 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 21:10:20 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 21:11:39 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
 #include <stdio.h>
-#include"libft.h"
+#include "libft.h"
 
-char *ft_strjoin(char const *s1, char const *s2)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int i = 0;
-	int j = 0;
-	int str1_len = ft_strlen(s1);
-	int str2_len = ft_strlen(s2);
+	int		i;
+	int		j;
+	int		str1_len;
+	int		str2_len;
+	char	*joined;
 
-	char *joined = malloc((str1_len + str2_len + 1) * sizeof(char));
+	i = 0;
+	j = 0;
+	str1_len = ft_strlen(s1);
+	str2_len = ft_strlen(s2);
+	*joined = malloc((str1_len + str2_len + 1) * sizeof(char));
 	if (!joined)
-		return NULL;
-
+		return (NULL);
 	i = 0;
 	while (s1[i])
 	{
@@ -20,7 +36,6 @@ char *ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
-
 	i = 0;
 	while (s2[i])
 	{
@@ -28,10 +43,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
-
 	joined[j] = '\0';
-
-	return joined;
+	return (joined);
 }
 
 /*

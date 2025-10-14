@@ -1,22 +1,31 @@
-#include<stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/10/14 20:37:37 by sekhudol          #+#    #+#             */
+/*   Updated: 2025/10/14 20:46:44 by sekhudol         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void *ft_memchr(const void *s, int c, size_t n)
+#include <stdio.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t i = 0;
+	size_t					i;
+	const unsigned char		*p;
 
-	// Consideramos que char será del tamaño de 1Byte
-	// por lo cual para iterar le tenemos que especificar
-	// el tipo (char) al puntero.
-	const unsigned char *p = s;
-	
-	
-	while(p[i] && i<n){
-		if(p[i] == c)
-			return (void *)&p[i];
+	i = 0;
+	p = s;
+	while (p[i] && i < n)
+	{
+		if (p[i] == c)
+			return ((void *)&p[i]);
 		i++;
 	}
-
-	return NULL;
+	return (NULL);
 }
 
 /*
