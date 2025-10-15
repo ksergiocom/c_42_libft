@@ -6,56 +6,64 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:31:50 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 20:37:08 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:09:33 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 
+char	*handle_zero(void)
+{
+	char	*string;
+
+	string = malloc(2 * sizeof(char));
+	if (!string)
+		return (NULL);
+	string[0] = '0';
+	string[1] = '\0';
+	return (string);
+}
+
+int	count_length(int n)
+{
+	int	count;
+
+	count = 0;
+	if (n < 0)
+		count++;
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*string;
 	char	negativo;
 	int		digits;
-	int		tmp;
 
 	negativo = 0;
 	digits = 0;
-	tmp = n;
 	if (n == 0)
-	{
-		string = malloc(2 * sizeof(char));
-		if (!string)
-			return (NULL);
-		string[0] = '0';
-		return (string);
-	}
-	if (tmp < 0)
-	{
-		negativo = '-';
-		tmp *= -1;
-	}
-	while (tmp > 0)
-	{
-		tmp /= 10;
-		digits++;
-	}
-	if (negativo)
-		digits++;
+		return (handle_zero());
+	negativo = (n < 0);
+	digits = count_length(n);
 	string = malloc((digits + 1) * sizeof(char));
 	if (!string)
 		return (NULL);
-	tmp = n;
 	if (negativo)
 	{
-		tmp *= -1;
 		string[0] = '-';
+		n *= -1;
 	}
-	while (tmp > 0)
+	while (n > 0)
 	{
-		string[digits - 1] = (tmp % 10) + '0';
-		tmp /= 10;
+		string[digits - 1] = (n % 10) + '0';
+		n /= 10;
 		digits--;
 	}
 	return (string);

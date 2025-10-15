@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:10:20 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:11:39 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:29:48 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,25 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
 	int		j;
 	int		str1_len;
 	int		str2_len;
 	char	*joined;
 
-	i = 0;
 	j = 0;
 	str1_len = ft_strlen(s1);
 	str2_len = ft_strlen(s2);
-	*joined = malloc((str1_len + str2_len + 1) * sizeof(char));
+	joined = malloc((str1_len + str2_len + 1) * sizeof(char));
 	if (!joined)
 		return (NULL);
-	i = 0;
-	while (s1[i])
+	while (*s1)
 	{
-		joined[j] = s1[i];
-		i++;
+		joined[j] = *s1++;
 		j++;
 	}
-	i = 0;
-	while (s2[i])
+	while (*s2)
 	{
-		joined[j] = s2[i];
-		i++;
+		joined[j] = *s2++;
 		j++;
 	}
 	joined[j] = '\0';
