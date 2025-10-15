@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:14:27 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:14:56 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:14:43 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	initial_len_src = ft_strlen(src);
 	final_len = initial_len_dst + initial_len_src;
 	j = 0;
-	if (size < initial_len_dst)
+	if (size <= initial_len_dst)
 		return (size + initial_len_src);
-	while (i < size - 1 && dst[i])
-	{
-		i++;
-	}
+	i = initial_len_dst;
 	while (i < size - 1 && src[j])
 	{
 		dst[i] = src[j];

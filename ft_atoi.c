@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:05:47 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 13:26:18 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:48:51 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,33 +14,36 @@
 #include <stdlib.h>
 #include "libft.h"
 
+int	ft_isspace(const char s)
+{
+	if (s >= 9 && s <= 13)
+		return (1);
+	if (s == 32)
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *s)
 {
 	char	signo;
 	int		res;
 
-	signo = 0;
+	signo = 1;
 	res = 0;
-	while (
-		*s
-		&& (ft_isdigit(*s) || (!signo && (*s == '-' || *s == '+')))
-	)
+	while (ft_isspace(*s))
+		s++;
+	if (*s == '+' || *s == '-')
 	{
-		if (ft_isdigit(*s))
-			res = res * 10 + *s - 48;
-		else if (!signo && (*s == '-' || *s == '+'))
-			signo = *s;
-		else
-		{
-			if (signo == '-')
-				res *= -1;
-			return (res);
-		}
+		if (*s == '-')
+			signo = -1;
 		s++;
 	}
-	if (signo == '-')
-		res *= -1;
-	return (res);
+	while (ft_isdigit(*s))
+	{
+		res = res * 10 + (*s - '0');
+		s++;
+	}
+	return (res * signo);
 }
 
 /*

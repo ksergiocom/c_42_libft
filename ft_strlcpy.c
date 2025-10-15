@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:15:12 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:16:06 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:19:31 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
 {
 	size_t	i;
 
+	if (dsize == 0)
+		return (ft_strlen(src));
 	i = 0;
 	while (i < dsize - 1 && src[i])
 	{

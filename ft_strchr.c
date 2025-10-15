@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:06:09 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:06:52 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:24:00 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strchr(const char *s, int c)
 			return ((char *)s);
 		s++;
 	}
+	if ((char) c == '\0')
+		return ((char *)s);
 	return (NULL);
 }
 

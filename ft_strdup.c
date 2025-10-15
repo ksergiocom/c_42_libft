@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:07:08 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 13:36:52 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:02:42 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strdup(const char *s)
 	p = (char *) ft_calloc(sizeof(char), len + 1);
 	if (!p)
 		return (NULL);
-	ft_strlcpy(p, s, len);
+	ft_strlcpy(p, s, len + 1);
 	return (p);
 }
 
