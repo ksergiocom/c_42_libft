@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:21:04 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 20:23:18 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 13:37:48 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_bzero(void *dest, size_t count)
 	char	*s;
 
 	i = 0;
-	*s = dest;
+	s = (char *) dest;
 	while (i < count)
 	{
 		s[i] = '\0';
