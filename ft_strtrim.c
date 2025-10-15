@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:26:37 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:29:02 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 15:22:43 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (end > start && ft_strchr(set, s1[end]))
 		end--;
 	new_length = end - start + 1;
-	trimmed = malloc(new_length * sizeof(char));
+	trimmed = malloc((new_length + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
 	while (start + i <= end)
@@ -39,7 +39,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 		trimmed[i] = s1[start + i];
 		i++;
 	}
-	trimmed[start + i] = '\0';
+	trimmed[i] = '\0';
 	return (trimmed);
 }
 

@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:31:50 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 13:09:33 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 16:08:35 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,25 +45,26 @@ char	*ft_itoa(int n)
 	char	*string;
 	char	negativo;
 	int		digits;
+	long	nbr;
 
 	negativo = 0;
-	digits = 0;
 	if (n == 0)
 		return (handle_zero());
-	negativo = (n < 0);
-	digits = count_length(n);
+	nbr = n;
+	negativo = (nbr < 0);
+	digits = count_length(nbr);
 	string = malloc((digits + 1) * sizeof(char));
 	if (!string)
 		return (NULL);
 	if (negativo)
 	{
 		string[0] = '-';
-		n *= -1;
+		nbr *= -1;
 	}
-	while (n > 0)
+	while (nbr > 0)
 	{
-		string[digits - 1] = (n % 10) + '0';
-		n /= 10;
+		string[digits - 1] = (nbr % 10) + '0';
+		nbr /= 10;
 		digits--;
 	}
 	return (string);

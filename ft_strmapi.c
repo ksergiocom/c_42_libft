@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:17:21 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:19:14 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/15 14:54:50 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		new_string[i] = f(i, s[i]);
 		i++;
 	}
+	new_string[i] = '\0';
 	return (new_string);
 }
