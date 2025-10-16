@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 22:58:52 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 15:59:21 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:08:53 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,15 +86,15 @@ char	**ft_split(char const *s, char c)
 		return (NULL);
 	while (*s)
 	{
+		ft_skip_separator(&s, c);
 		word_size = (word_len(s, c)) + 1;
 		*array = ft_allocate_string_memory(word_size, array);
-		if (!array)
+		if (!*array)
 			return (NULL);
 		ft_strlcpy(*array, s, word_size);
 		array++;
 		s = s + word_len(s, c);
-		while (*s && *s == c)
-			s++;
+		ft_skip_separator(&s, c);
 	}
 	*array = NULL;
 	return (start);
@@ -103,8 +103,8 @@ char	**ft_split(char const *s, char c)
 /*
 int main(void)
 {
-	char *s = "Hola,que,tal!?";
-	char **a = ft_split(s, ',');
+	char *s = "   lorem   ipsum dolor  "; 
+	char **a = ft_split(s, ' ');
 	while(*a){
 		printf("%s\n", *a);
 		a++;

@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:34:23 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 22:01:33 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:09:29 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+void	ft_skip_separator(const char **s, char separator);
 
 #endif
