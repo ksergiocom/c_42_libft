@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:57:02 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 16:13:23 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:31:23 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_putnbr_fd(int n, int fd)
 
 	if (n == -2147483648)
 	{
-		write(fd, "-2147483648", 11);
-		return;
+		write (fd, "-2147483648", 11);
+		return ;
 	}
 	if (n < 0)
 	{

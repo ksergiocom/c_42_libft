@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:31:50 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 16:08:35 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:30:15 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,13 @@ char	*handle_zero(void)
 	return (string);
 }
 
-int	count_length(int n)
+int	handle_negativo(int n, char *string)
+{
+	string[0] = '-';
+	return (n * -1);
+}
+
+int	count_length(long n)
 {
 	int	count;
 
@@ -57,10 +63,8 @@ char	*ft_itoa(int n)
 	if (!string)
 		return (NULL);
 	if (negativo)
-	{
-		string[0] = '-';
-		nbr *= -1;
-	}
+		nbr = handle_negativo(nbr, string);
+	string[digits] = '\0';
 	while (nbr > 0)
 	{
 		string[digits - 1] = (nbr % 10) + '0';
@@ -71,7 +75,7 @@ char	*ft_itoa(int n)
 }
 
 /*
-void check_itoa(int n){
+void	check_itoa(int n){
 	printf("mi itoa: %s\n", ft_itoa(n));
 	return;
 }
@@ -85,7 +89,16 @@ int main(){
 	check_itoa(-1);
 	check_itoa(+1);
 	check_itoa(999999999);
-
+	check_itoa(9);
+	check_itoa(-9);
+	check_itoa(10);
+	check_itoa(-10);
+	check_itoa(8124);
+	check_itoa(-9874);
+	check_itoa(543000);
+	check_itoa(-2147483648LL);
+	check_itoa(2147483647);
+	check_itoa(9);
 	return 0;
 }
 */
