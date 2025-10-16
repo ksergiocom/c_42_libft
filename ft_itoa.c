@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:31:50 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/16 15:30:15 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 15:48:31 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*handle_zero(void)
 	return (string);
 }
 
-int	handle_negativo(int n, char *string)
+long	handle_negativo(long n, char *string)
 {
 	string[0] = '-';
 	return (n * -1);
