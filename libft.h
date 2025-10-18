@@ -6,13 +6,19 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:34:23 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/16 15:09:29 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/16 16:21:39 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stddef.h>
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 int		ft_atoi(const char *s);
 void	*ft_bzero(void *dest, size_t count);
