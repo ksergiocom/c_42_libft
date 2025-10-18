@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:50:42 by sekhudol          #+#    #+#              #
-#    Updated: 2025/10/16 17:20:52 by sekhudol         ###   ########.fr        #
+#    Updated: 2025/10/18 08:27:08 by sekhudol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,14 +57,9 @@ SOURCES = ft_atoi.c						\
 					ft_toupper.c		\
 					ft_skip_separator.c	
 
-BONUS_SOURCES = ft_lstnew.c				\
-				ft_lstadd_front.c		\
-				ft_lstsize.c				
-
 # Todos los fuentes pero cambiando el sufijo
 OBJECTS = $(SOURCES:.c=.o)
 
-BONUS_OBJECTS = $(BONUS_SOURCES:.c=.o)
 ###########################################################
 
 # Regla que se lanza por defecto
@@ -73,10 +68,6 @@ all: $(NAME)
 # Regla para generar el `libft.a`
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
-
-# BONUS
-bonus : $(BONUS_OBJECTS) $(NAME)
-	ar rs $(NAME) $(BONUS_OBJECTS)
 
 # Generar todos los .o; teniendo como dependencias
 # todos los ficheros .c

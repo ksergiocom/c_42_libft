@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:31:50 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/16 15:48:31 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:40:33 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 char	*handle_zero(void)
 {
@@ -74,31 +73,3 @@ char	*ft_itoa(int n)
 	return (string);
 }
 
-/*
-void	check_itoa(int n){
-	printf("mi itoa: %s\n", ft_itoa(n));
-	return;
-}
-
-
-int main(){
-
-	check_itoa(1);
-	check_itoa(0);
-	check_itoa(123);
-	check_itoa(-1);
-	check_itoa(+1);
-	check_itoa(999999999);
-	check_itoa(9);
-	check_itoa(-9);
-	check_itoa(10);
-	check_itoa(-10);
-	check_itoa(8124);
-	check_itoa(-9874);
-	check_itoa(543000);
-	check_itoa(-2147483648LL);
-	check_itoa(2147483647);
-	check_itoa(9);
-	return 0;
-}
-*/

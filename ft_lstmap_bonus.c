@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_listmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,21 +12,21 @@
 
 #include "libft.h"
 
-t_lst	*ft_lstmap(t_lst *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_listmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	size_t	lst_size;
-	t_lst	**new_lst;
-	t_lst	*nodo_iterado;
-	t_lst	*new_nodo;
+	t_list	**new_lst;
+	t_list	*nodo_iterado;
+	t_list	*new_nodo;
 
-	lst_size = ft_lstsize(lst);
-	new_lst = malloc(lst_size * sizeof(t_lst));
+	lst_size = ft_listsize(lst);
+	new_lst = malloc(lst_size * sizeof(t_list));
 	if (!new_lst)
 		return (NULL);
 	while (lst)
 	{
-		new_nodo = ft_lstnew(f(lst->content));
-		ft_lstlast(new_lst, new_nodo);
+		new_nodo = ft_listnew(f(lst->content));
+		ft_listlast(new_lst, new_nodo);
 		lst = lst->next;
 	}
 	

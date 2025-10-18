@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 22:58:52 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/16 15:08:53 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:55:37 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 int	word_len(char const *s, char c)
@@ -100,15 +98,3 @@ char	**ft_split(char const *s, char c)
 	return (start);
 }
 
-/*
-int main(void)
-{
-	char *s = "   lorem   ipsum dolor  "; 
-	char **a = ft_split(s, ' ');
-	while(*a){
-		printf("%s\n", *a);
-		a++;
-	}
-	return (0);
-}
-*/

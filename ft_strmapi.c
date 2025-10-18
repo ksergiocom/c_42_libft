@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:17:21 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 14:54:50 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 09:00:14 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

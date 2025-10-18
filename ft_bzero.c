@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:21:04 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 13:37:48 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:31:27 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_bzero(void *dest, size_t count)
 {
@@ -26,14 +26,3 @@ void	*ft_bzero(void *dest, size_t count)
 	}
 	return (dest);
 }
-/*
-int main()
-{
-	char str[] = "Hola que tal todo, estoy probando";
-	printf("str original: %s\n", str);
-	ft_bzero(str, 10);
-	printf("str bzero: %s\n", str);
-	
-	return 0;
-}
-*/

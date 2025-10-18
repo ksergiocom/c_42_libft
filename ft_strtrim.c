@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:26:37 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 15:22:43 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 09:02:53 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
 #include "libft.h"
 
 char	*ft_strtrim(char const *s1, char const *set)
@@ -43,15 +41,4 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (trimmed);
 }
 
-/*
-int main(){
 
-	char *original = "azaabbbazacczaaaaa";
-	char *trimmed = ft_strtrim(original, "az");
-
-	printf("Original: %s\n", original);
-	printf("Trimmed: %s\n", trimmed);
-
-	return 0;
-}
-*/

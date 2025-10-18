@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:14:27 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 14:14:43 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:58:16 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
@@ -18,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	initial_len_dst;
 	size_t	initial_len_src;
 	size_t	final_len;
-	int		j;
+	size_t	j;
 	size_t	i;
 
 	initial_len_dst = ft_strlen(dst);
@@ -38,15 +37,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	return (final_len);
 }
 
-/*
-int main()
-{
-	char str1[] = "Hola";
-	char str2[] = " Mundo!";
-
-
-	printf("ret: %lu cat:%s\n", ft_strlcat(str1,str2,0), str1);
-
-	return 0;
-}
-*/

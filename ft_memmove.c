@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:53:21 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 20:54:17 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:49:11 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
@@ -40,17 +39,3 @@ void	*ft_memmove(void *dest, const void *src, size_t count)
 	free (tmp);
 	return (d);
 }
-
-/*
-int main()
-{
-	char str[] = "Hola mundo!";
-	char copied[20];
-
-	ft_memmove(copied, str, 6);
-
-	printf("%s\n", copied);
-
-	return 0;	
-}
-*/

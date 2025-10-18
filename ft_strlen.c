@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:16:17 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 21:17:05 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 09:00:03 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -25,13 +24,3 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-/*
-int main()
-{
-	const char *str = "Hola";
-	
-	printf("ft_strlen de %s: %ld\n", str, ft_strlen(str));
-	
-	return 0;
-}
-*/

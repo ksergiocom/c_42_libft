@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:54:48 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 20:55:47 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:50:03 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memset(void *dest, int c, size_t count)
 {
@@ -26,15 +26,3 @@ void	*ft_memset(void *dest, int c, size_t count)
 	}
 	return (dest);
 }
-
-/*
-int main()
-{
-	char str[] = "Hola que tal todo, estoy probando memset";
-	printf("str original: %s\n", str);
-	ft_memset(str, 'a', 10);
-	printf("str memset: %s\n", str);
-	
-	return 0;
-}
-*/

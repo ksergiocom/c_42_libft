@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:20:47 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/14 22:10:18 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 09:01:38 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
@@ -38,20 +37,3 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	}
 	return (NULL);
 }
-
-/*
-int main(){
-	
-	char *big = "Hola que tal!?";
-	char *little = "que";
-	char *res_ptr = ft_strnstr(big, little, 7);	
-	
-	if(!res_ptr){
-		printf("No se encontró\n");
-	}else{
-		printf("%s\n", res_ptr);
-	}
-
-	return 0;
-}
-*/

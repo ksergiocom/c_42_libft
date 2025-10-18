@@ -3,15 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:10:20 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 13:29:48 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:57:56 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
@@ -40,19 +38,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	joined[j] = '\0';
 	return (joined);
 }
-
-/*
-int main()
-{
-	char *str1 = "super";
-	char *str2 = "cosa";
-
-	char *joined_str = ft_strjoin(str1, str2);
-
-	printf("str1: %s\n", str1);
-	printf("str2: %s\n", str2);
-	printf("joined_str: %s\n", joined_str);
-
-	return 0;
-}
-*/

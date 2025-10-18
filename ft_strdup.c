@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
+/*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:07:08 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/15 14:02:42 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/18 08:56:17 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include "libft.h"
 
 char	*ft_strdup(const char *s)
@@ -26,18 +25,3 @@ char	*ft_strdup(const char *s)
 	return (p);
 }
 
-/*
-int main(){
-
-	char *s = "Hola mundo!";
-	char *copia;
-
-	copia = ft_strdup(s);
-
-	printf("%s\n", copia);
-
-	free(copia);
-
-	return 0;
-}
-*/
