@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <ctype.h> // Para isprint()
+#include "libft.h"
 
 void	check_original_atoi(const char *s){
 	printf("---------\n");
@@ -10,17 +11,17 @@ void	check_original_atoi(const char *s){
 }
 
 void	test_ft_atoi(){
-	test_atoi("123");
-	test_atoi("123456789123456789");
-	test_atoi("-123");
-	test_atoi("+123");
-	test_atoi("--123");
-	test_atoi("---123");
-	test_atoi("+123");
-	test_atoi("++123");
-	test_atoi("123asd123");
-	test_atoi("asd123");
-	test_atoi("123abc");
+	check_original_atoi("123");
+	check_original_atoi("123456789123456789");
+	check_original_atoi("-123");
+	check_original_atoi("+123");
+	check_original_atoi("--123");
+	check_original_atoi("---123");
+	check_original_atoi("+123");
+	check_original_atoi("++123");
+	check_original_atoi("123asd123");
+	check_original_atoi("asd123");
+	check_original_atoi("123abc");
 }
 
 void	test_ft_bzero()
@@ -376,6 +377,53 @@ void	test_ft_toupper()
 
 int	main()
 {
+	test_ft_atoi();
+	test_ft_bzero();
+	test_ft_calloc();
+	test_ft_isalnum();
+	test_ft_isalpha();
+	test_ft_isascii();
+	test_ft_isdigit();
+	test_ft_isprint();
+	test_ft_itoa();
+	test_ft_memchr();
+	test_ft_memcmp();
+	test_ft_memcpy();
+	test_ft_memmove();
+	test_ft_memset();
+	test_ft_putchar_fd();
+	test_ft_putendl_fd();
+	test_ft_putnbr_fd();
+	test_ft_putstr_fd();
+	test_ft_split();
+	test_ft_strchr();
+	test_ft_strdup();
+	// test_ft_striter(); // Sin implementar
+	test_ft_join();
+	test_ft_strlcat();
+	test_ft_strlcpy();
+	test_ft_strlen();
+	// test_ft_strmapi(); // Sin implementar
+	test_ft_strncmp();
+	test_ft_strnstr();
+	test_ft_strrchr();
+	test_ft_strtrim();
+	test_ft_substr();
+	test_ft_tolower();
+	test_ft_toupper();
+
+
+	// Bonus (No está hecho)
+	// ft_lstadd_back();
+	// ft_lstadd_front()
+	// ft_lstclear();
+	// ft_lstdelone();
+	// ft_lstiter();
+	// ft_lstlast();
+	// ft_lstmap();
+	// ft_lstnew();
+	// ft_lstsize();
+
 
 	return (0);
 }

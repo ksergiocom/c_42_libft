@@ -6,7 +6,7 @@
 #    By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:50:42 by sekhudol          #+#    #+#              #
-#    Updated: 2025/10/18 08:27:08 by sekhudol         ###   ########.fr        #
+#    Updated: 2025/10/18 09:55:40 by sekhudol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,41 +21,41 @@
 CFLAGS = -Wall -Wextra -Werror
 CC = cc
 NAME = libft.a
-SOURCES = ft_atoi.c						\
-					ft_bzero.c			\
-					ft_calloc.c			\
-					ft_isalnum.c 		\
-					ft_isalpha.c		\
-					ft_isascii.c		\
-					ft_isdigit.c		\
-					ft_isprint.c		\
-					ft_itoa.c			\
-					ft_memchr.c			\
-					ft_memcmp.c			\
-					ft_memcpy.c			\
-					ft_memmove.c		\
-					ft_memset.c			\
-					ft_putchar_fd.c		\
-					ft_putendl_fd.c		\
-					ft_putnbr_fd.c		\
-					ft_putstr_fd.c		\
-					ft_split.c			\
-					ft_strchr.c			\
-					ft_strdup.c			\
-					ft_striteri.c		\
-					ft_strjoin.c		\
-					ft_strlcat.c		\
-					ft_strlcpy.c		\
-					ft_strlen.c			\
-					ft_strmapi.c		\
-					ft_strncmp.c		\
-					ft_strnstr.c		\
-					ft_strrchr.c		\
-					ft_strtrim.c		\
-					ft_substr.c			\
-					ft_tolower.c		\
-					ft_toupper.c		\
-					ft_skip_separator.c	
+SOURCES = 	ft_atoi.c			\
+			ft_bzero.c			\
+			ft_calloc.c			\
+			ft_isalnum.c 		\
+			ft_isalpha.c		\
+			ft_isascii.c		\
+			ft_isdigit.c		\
+			ft_isprint.c		\
+			ft_itoa.c			\
+			ft_memchr.c			\
+			ft_memcmp.c			\
+			ft_memcpy.c			\
+			ft_memmove.c		\
+			ft_memset.c			\
+			ft_putchar_fd.c		\
+			ft_putendl_fd.c		\
+			ft_putnbr_fd.c		\
+			ft_putstr_fd.c		\
+			ft_split.c			\
+			ft_strchr.c			\
+			ft_strdup.c			\
+			ft_striteri.c		\
+			ft_strjoin.c		\
+			ft_strlcat.c		\
+			ft_strlcpy.c		\
+			ft_strlen.c			\
+			ft_strmapi.c		\
+			ft_strncmp.c		\
+			ft_strnstr.c		\
+			ft_strrchr.c		\
+			ft_strtrim.c		\
+			ft_substr.c			\
+			ft_tolower.c		\
+			ft_toupper.c		\
+			ft_skip_separator.c	
 
 # Todos los fuentes pero cambiando el sufijo
 OBJECTS = $(SOURCES:.c=.o)
@@ -66,23 +66,33 @@ OBJECTS = $(SOURCES:.c=.o)
 all: $(NAME)
 
 # Regla para generar el `libft.a`
-$(NAME): $(OBJECTS)
+$(NAME): $(OBJECTS) libft.h
 	ar rcs $(NAME) $(OBJECTS)
 
 # Generar todos los .o; teniendo como dependencias
 # todos los ficheros .c
 # $< es la primera dependencia 
 # $@ es el nombre
-%.o: %.c
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
 # Rebuild, borrar todo y generar todo
 re: fclean all
 
 # clean + Borrar el fichero principal generado
-fclean: clean
+fclean: clean tclean
 	rm -f $(NAME)
 
 # Borrar los .o y posibles a.out
 clean:
 	rm -f *.o a.out
+
+###########################################################
+
+test: test/test.c $(NAME) tclean
+	cp libft.h test/libft.h
+	cp libft.a test/libft.a
+	cc -Wall -Wextra -Werror -o test/test test/test.c -L./test -I./test -lft	
+
+tclean:
+	rm -f test/libft.h test/libft.a test/test
