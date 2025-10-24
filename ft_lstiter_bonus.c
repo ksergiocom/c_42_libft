@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 07:31:30 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/18 08:45:40 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/24 22:30:27 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst->next)
+	while (lst->next)
 		f(lst->content);
 }

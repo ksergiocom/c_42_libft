@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:16:17 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/18 09:00:03 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/24 22:34:08 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (i);
 }
-

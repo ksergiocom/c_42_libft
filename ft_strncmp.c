@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 21:19:36 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/18 09:00:37 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/24 22:31:46 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return ((unsigned char)*s1 - (unsigned char)*s2);
 	return (0);
 }
-

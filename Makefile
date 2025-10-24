@@ -6,7 +6,7 @@
 #    By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:50:42 by sekhudol          #+#    #+#              #
-#    Updated: 2025/10/24 18:57:16 by sekhudol         ###   ########.fr        #
+#    Updated: 2025/10/24 22:37:56 by sekhudol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,10 +55,20 @@ SOURCES = 	ft_atoi.c			\
 			ft_substr.c			\
 			ft_tolower.c		\
 			ft_toupper.c		\
-			ft_skip_separator.c	
+
+SOURCES_BONUS = ft_lstadd_back_bonus.c 	\
+			   ft_lstadd_front_bonus.c 	\
+			   ft_lstclear_bonus.c		\
+			   ft_lstdelone_bonus.c		\
+			   ft_lstiter_bonus.c		\
+			   ft_lstlast_bonus.c		\
+			   ft_lstmap_bonus.c		\
+			   ft_lstnew_bonus.c		\
+			   ft_lstsize_bonus.c		
 
 # Todos los fuentes pero cambiando el sufijo
 OBJECTS = $(SOURCES:.c=.o)
+OBJECTS_BONUS = $(SOURCES_BONUS:.c=.o)
 
 ###########################################################
 
@@ -68,6 +78,9 @@ all: $(NAME)
 # Regla para generar el `libft.a`
 $(NAME): $(OBJECTS) libft.h
 	ar rcs $(NAME) $(OBJECTS)
+
+bonus:	$(OBJECTS_BONUS) libft.h $(NAME)
+	ar rs $(NAME) $(OBJECTS_BONUS)
 
 # Generar todos los .o; teniendo como dependencias
 # todos los ficheros .c

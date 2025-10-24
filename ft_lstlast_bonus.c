@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 07:15:22 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/18 07:17:49 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/24 22:33:16 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list nodo;
+	t_list	*nodo;
 
-	while(lst->next)
+	while (lst->next)
 	{
 		nodo = lst->next;
 	}
