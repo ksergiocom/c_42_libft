@@ -6,7 +6,7 @@
 #    By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/15 14:50:42 by sekhudol          #+#    #+#              #
-#    Updated: 2025/10/18 09:55:40 by sekhudol         ###   ########.fr        #
+#    Updated: 2025/10/24 18:57:16 by sekhudol         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,7 +80,7 @@ $(NAME): $(OBJECTS) libft.h
 re: fclean all
 
 # clean + Borrar el fichero principal generado
-fclean: clean tclean
+fclean: clean 
 	rm -f $(NAME)
 
 # Borrar los .o y posibles a.out
@@ -88,11 +88,3 @@ clean:
 	rm -f *.o a.out
 
 ###########################################################
-
-test: test/test.c $(NAME) tclean
-	cp libft.h test/libft.h
-	cp libft.a test/libft.a
-	cc -Wall -Wextra -Werror -o test/test test/test.c -L./test -I./test -lft	
-
-tclean:
-	rm -f test/libft.h test/libft.a test/test
