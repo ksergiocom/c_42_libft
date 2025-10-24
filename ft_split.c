@@ -6,7 +6,7 @@
 /*   By: sekhudol <sekhudol@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 19:12:09 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/24 20:20:18 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/24 20:24:52 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,13 @@ char	**free_all(char **array)
 	return (NULL);
 }
 
+char const	*skip_separator(char const *s, char c)
+{
+	while (*s && *s == c)
+		s++;
+	return (s);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	int		count;
@@ -72,8 +79,7 @@ char	**ft_split(char const *s, char c)
 		return (free_all(start));
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
+		s = skip_separator(s, c);
 		if (!*s)
 			break ;
 		word_len = count_word_length(s, c);
