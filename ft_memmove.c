@@ -6,36 +6,36 @@
 /*   By: sekhudol <sekhudol@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 20:53:21 by sekhudol          #+#    #+#             */
-/*   Updated: 2025/10/18 08:49:11 by sekhudol         ###   ########.fr       */
+/*   Updated: 2025/10/25 15:43:00 by sekhudol         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+int	are_overlaping(void *dest, const void *src, size_t count)
+{
+	return (src < dest && src + count - 1 >= dest);
+}
+
 void	*ft_memmove(void *dest, const void *src, size_t count)
 {
-	size_t		i;
-	char		*d;
-	const char	*s;
-	char		*tmp;
+	char *d;
+	char *s;
 
-	i = 0;
-	d = dest;
-	s = src;
-	tmp = malloc(count * sizeof(char));
-	if (!tmp)
-		return (NULL);
-	while (i < count)
+	d = (char *)dest;
+	s = (char *)src;
+	if (!are_overlaping(d, s, count))
+		ft_memcpy(dest, src, count);
+	else
 	{
-		tmp[i] = s[i];
-		i++;
+		d += count;
+		s += count;
+		while (count--)
+		{
+			d--;
+			s--;
+			*d = *s;
+		}
 	}
-	i = 0;
-	while (i < count)
-	{
-		d[i] = tmp[i];
-		i++;
-	}
-	free (tmp);
-	return (d);
+	return (void *)d;
 }
